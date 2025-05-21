@@ -70,3 +70,53 @@ nav button:hover{
     
 
 }
+
+main{
+    max-width: 700px;
+    margin:0 auto;
+}
+
+main article {
+    background-color: #c4c4c4;
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.animal-card-text {
+    padding: 1rem 2rem;    
+}
+
+.animal-card-photo {
+    min-width: 200px;
+    overflow: hidden;
+}
+
+.animal-card-photo img{
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+main article:hover img{
+    transform: rotate(20deg) scale(1.4); 
+}
+.animal-card-button{
+    background-color: blueviolet; 
+    color: #000000;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border-style:solid;
+    border-color: rgb(77, 5, 77);
+    border-width: 2px;
+    
+    
+}
+
+.animal-card-button:hover{
+    background: linear-gradient(to top,rgb(146,22,147),rgb(228,131,230 ));
+}
