@@ -7,16 +7,32 @@ async function getPetsData() {
 
 }
 
+function getage(pet) {
+    const date = new Date()
+    const year = date.getFullYear() 
+    const age = year - pet.birthYear
+    if (age == 1) {
+        return `${age} year old`}
+    else if (age< 1)
+        return `less than 1 year old`
+    else {
+        return `${age} years old`
+    }
+    
+
+}
+
 async function displaypPets() {
     const pets = await getPetsData();
     const template = document.querySelector
     (`#animal-card-template`)
 
     const wrapper = document.querySelector(`main`)
+    const shown_pets = pets
     
     console.log(template)
 
-    pets.forEach(pet =>{
+    shown_pets.forEach(pet =>{
        const clone = template.content.cloneNode(true)
 
        //qui modifichiamo il template
@@ -26,8 +42,10 @@ async function displaypPets() {
         name.textContent=pet.name
         const description = clone.querySelector(`.animal-card-text p`)
         description.textContent=pet.description
-        const specie = clone.querySelector(`.animal-card-text `)
-        description.textContent=pet.description
+        const specie = clone.querySelector(`#specie`)
+        specie.textContent=pet.species
+        const anni = clone.querySelector(`#age`)
+        anni.textContent= getage(pet)
        //aggiungiamo l'articolo alla pagina
        wrapper.appendChild(clone)
 
@@ -35,4 +53,18 @@ async function displaypPets() {
     );
 }
 
+
+
+function animal_selection(pet_type){
+    
+    if (pet_type =! `all`){
+       const shown_pets = pets;
+    }
+    else {
+        pets.species = pet_type
+        shown_pets = pets.species
+        }
+
+    return shown_pets
+}
 displaypPets()
