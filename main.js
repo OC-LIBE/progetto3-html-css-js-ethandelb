@@ -55,16 +55,40 @@ async function displaypPets() {
 
 
 
-function animal_selection(pet_type){
+// function animal_selection(pet_type){
     
-    if (pet_type =! `all`){
-       const shown_pets = pets;
-    }
-    else {
-        pets.species = pet_type
-        shown_pets = pets.species
+//     if (pet_type =! `all`){
+//        const shown_pets = pets;
+//     }
+//     else {
+//         pets.species = pet_type
+//         shown_pets = pets.species
+//         }
+
+//     return shown_pets
+// }
+
+
+
+function displayFilteredAnimals(e) {
+        let article = document.querySelectorAll("article")
+        article.forEach(articolo =>{
+            if (articolo.querySelector("#specie") !== e.target.dataFilter){
+                articolo.style.display = "none";
+            }
         }
 
-    return shown_pets
-}
+        )
+    }
+   
+
+const filterButtons = document.querySelectorAll("nav button");
+
+filterButtons.forEach(button => {
+    button.addEventListener("click", (e)=> {
+        displayFilteredAnimals(e)
+    }
+    )
+})
+
 displaypPets()
