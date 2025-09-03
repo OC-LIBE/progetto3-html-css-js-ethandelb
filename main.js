@@ -42,9 +42,9 @@ async function displaypPets() {
         name.textContent=pet.name
         const description = clone.querySelector(`.animal-card-text p`)
         description.textContent=pet.description
-        const specie = clone.querySelector(`#specie`)
+        const specie = clone.querySelector(`.specie`)
         specie.textContent=pet.species
-        const anni = clone.querySelector(`#age`)
+        const anni = clone.querySelector(`.age`)
         anni.textContent= getage(pet)
        //aggiungiamo l'articolo alla pagina
        wrapper.appendChild(clone)
@@ -66,15 +66,24 @@ async function displaypPets() {
 //         }
 
 //     return shown_pets
-// }
+//}
 
 
 
 function displayFilteredAnimals(e) {
         let article = document.querySelectorAll("article")
+        console.log(e.target.dataset.filter)
         article.forEach(articolo =>{
-            if (articolo.querySelector("#specie") !== e.target.dataFilter){
-                articolo.style.display = "none";
+            const specie = articolo.querySelector(".specie").innerText.toLowerCase()
+            console.log(specie)
+            if (e.target.dataset.filter == "All"){
+               articolo.style.display = "flex" 
+            }
+            else if (specie !== e.target.dataset.filter){
+                articolo.style.display = "none"
+            }
+            else {
+                articolo.style.display = "flex"
             }
         }
 
@@ -90,5 +99,6 @@ filterButtons.forEach(button => {
     }
     )
 })
+
 
 displaypPets()
