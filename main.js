@@ -28,11 +28,10 @@ async function displaypPets() {
     (`#animal-card-template`)
 
     const wrapper = document.querySelector(`main`)
-    const shown_pets = pets
     
     console.log(template)
 
-    shown_pets.forEach(pet =>{
+    pets.forEach(pet =>{
        const clone = template.content.cloneNode(true)
 
        //qui modifichiamo il template

@@ -33,7 +33,7 @@ header h2 {
 header:before{
     content: "";
     height: 15px;
-    background: linear-gradient(to left,rgb(146,22,147),rgb(228,131,230));
+    background: linear-gradient(to left,rgb(146,22,147),rgb(230, 131, 131));
     position: absolute;
     top:0;
     left:0;
@@ -43,7 +43,7 @@ header:before{
 header:after{
     content: "";
     height: 15px;
-    background: linear-gradient(to right,rgb(146,22,147),rgb(228,131,230));
+    background: linear-gradient(to right,rgb(146,22,147),rgb(230, 131, 131));
     position: absolute;
     bottom:0;
     left:0;
@@ -64,7 +64,7 @@ nav button{
 }
 
 nav button:hover{   
-    background: linear-gradient(to top,rgb(146,22,147),rgb(228,131,230 ));
+    background: linear-gradient(to bottom,rgb(146,22,147),rgb(230, 131, 131));
     color :#FFFFFF;
     cursor: pointer;
     
