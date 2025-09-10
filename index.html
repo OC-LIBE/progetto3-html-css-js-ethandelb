@@ -3,8 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Progetto 3</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="main.js" defer ></script>
 </head>
 <body>
+  <header class="title">
+    <h1>Welcome</h1>
+    <h2>Our friends need a home!</h2>
+  </header>
+  <nav>
+    <button data-filter ="All">Show all</button>
+    <button data-filter ="dog">Only dogs</button>
+    <button data-filter ="cat">Only cats</button>
+    <button data-filter ="rabbit">Only rabbits</button>
+  </nav>
+
+  <main>
+    <template id="animal-card-template">
+      <article>
+        <section class="animal-card-text">
+            <h1>Nome animale</h1>
+            <small>
+              <span class="age">2 anni</span>  - 
+              <span class="specie">cane</span>
+            </small>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque ea a blanditiis consequuntur accusamus error necessitatibus neque delectus sint, doloribus facilis architecto soluta at iste autem dolorem quasi dicta! Repellat.
+            </p>
+            <a href="https://www.modellflug.ch/Gallery/35/Ennio%20Fest%20(10).jpg" target="_blank" class="animal-card-button">Adopt me</a> 
+        </section>
+        <section class="animal-card-photo">
+          <img src="static/dog2.webp">
+        </section>
+      </article>
+    </template>
+  </main>
+
 </body>
 </html>

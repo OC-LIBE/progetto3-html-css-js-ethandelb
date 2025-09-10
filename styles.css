@@ -1,0 +1,123 @@
+html ,body {
+  margin : 0;
+  padding :0;  
+}
+
+body{
+    font-family : Arial, Helvetica, sans-serif;
+    background-color : white; 
+}
+
+header {
+    background-color: rgb(146,22,147);
+    color: #FFFFFF;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+
+}
+
+header h1 {
+    margin : 0;
+    font-weight: normal;
+    font-size: 4rem;
+    
+}
+
+header h2 {
+    margin : 0;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+header:before{
+    content: "";
+    height: 15px;
+    background: linear-gradient(to left,rgb(146,22,147),rgb(230, 131, 131));
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+}
+
+header:after{
+    content: "";
+    height: 15px;
+    background: linear-gradient(to right,rgb(146,22,147),rgb(230, 131, 131));
+    position: absolute;
+    bottom:0;
+    left:0;
+    right: 0;
+}
+nav{
+    margin: 20px;
+    text-align: center;
+}
+
+nav button{
+
+    background-color: #FFFFFF;
+    color :rgb(146, 22, 147);    
+    border-color: rgb(146, 22, 147);
+    padding: 7px;
+    border-radius: 5px;
+}
+
+nav button:hover{   
+    background: linear-gradient(to bottom,rgb(146,22,147),rgb(230, 131, 131));
+    color :#FFFFFF;
+    cursor: pointer;
+    
+
+}
+
+main{
+    max-width: 700px;
+    margin:0 auto;
+}
+
+main article {
+    background-color: #c4c4c4;
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.animal-card-text {
+    padding: 1rem 2rem;    
+}
+
+.animal-card-photo {
+    min-width: 200px;
+    flex-basis: 200px;
+    overflow: hidden;
+}
+
+.animal-card-photo img{
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+main article:hover img{
+    transform: rotate(20deg) scale(1.4); 
+}
+.animal-card-button{
+    background-color: blueviolet; 
+    color: #000000;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border-style:solid;
+    border-color: rgb(77, 5, 77);
+    border-width: 2px;
+    
+    
+}
+
+.animal-card-button:hover{
+    background: linear-gradient(to top,rgb(146,22,147),rgb(228,131,230 ));
+}
